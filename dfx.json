@@ -1,0 +1,37 @@
+{
+  "canisters": {
+    "esports-rating-backend": {
+      "main": "src/esports-rating-backend/main.mo",
+      "type": "motoko"
+    },
+    "esports-rating-frontend": {
+      "dependencies": [
+        "esports-rating-backend"
+      ],
+      "source": [
+        "src/esports-rating-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "esports-rating-frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
